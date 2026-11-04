@@ -89,7 +89,7 @@ export default function Projects() {
           {filtered.map((project) => (
             <div
               key={project.id}
-              className="reveal group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between"
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between animate-in fade-in duration-200"
             >
               <div>
                 {/* Project Image Preview */}

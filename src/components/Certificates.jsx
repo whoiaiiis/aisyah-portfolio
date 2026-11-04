@@ -31,7 +31,7 @@ const certificates = [
     title: 'SIAP 2024 Creative Video Competition — 2nd Place',
     issuer: 'SIAP 2024 Committee (LDK KARISMA Polsri)',
     year: '2024',
-    category: 'Professional Development',
+    category: 'Organizational Activities',
     image: '/certificates/cert_4.png',
   },
   {
@@ -94,8 +94,7 @@ export default function Certificates() {
 
   const categoryColors = {
     'Technology & Digital Skills': 'bg-blue-50 text-blue-700 border-blue-200',
-    'Professional Development': 'bg-green-50 text-green-700 border-green-200',
-    'Communication & English': 'bg-purple-50 text-purple-700 border-purple-200',
+    'Professional Development': 'bg-emerald-50 text-emerald-700 border-emerald-200',
     'Organizational Activities': 'bg-orange-50 text-orange-700 border-orange-200',
   };
 
@@ -118,19 +117,34 @@ export default function Certificates() {
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveFilter(cat)}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${
-                activeFilter === cat
-                  ? 'bg-accent text-white shadow-lg shadow-accent/25'
-                  : 'bg-white text-text-dark border border-border hover:border-accent/40 hover:text-accent'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {categories.map((cat) => {
+            const count =
+              cat === 'All'
+                ? certificates.length
+                : certificates.filter((c) => c.category === cat).length;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
+                  activeFilter === cat
+                    ? 'bg-accent text-white shadow-lg shadow-accent/25'
+                    : 'bg-white text-text-dark border border-border hover:border-accent/40 hover:text-accent'
+                }`}
+              >
+                <span>{cat}</span>
+                <span
+                  className={`px-1.5 py-0.5 rounded-full text-[11px] font-semibold ${
+                    activeFilter === cat
+                      ? 'bg-white/20 text-white'
+                      : 'bg-bg-light text-text-muted'
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Grid */}
@@ -138,7 +152,7 @@ export default function Certificates() {
           {filtered.map((cert) => (
             <div
               key={cert.id}
-              className="reveal group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between"
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between animate-in fade-in duration-200"
             >
               <div>
                 {/* Certificate image preview */}
