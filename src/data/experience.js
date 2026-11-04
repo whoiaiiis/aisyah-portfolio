@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     company: "PT PLN (Persero) – UP3 Palembang, ULP Rivai",
     position: "Technical Administration Intern",
-    period: "Edit Period Here",
+    period: "July 2025 – October 2025",
     type: "Internship",
     logo: null,
     responsibilities: [
@@ -28,7 +28,7 @@ export const experiences = [
     type: "Internship",
     logo: null,
     responsibilities: [
-      "Awarded Best Intern of the Month consecutively for September and October 2026 for outstanding dedication and innovative contributions.",
+      "Awarded Best Intern of the Month consecutively for September and October 2026 as KOL Specialist Intern for outstanding dedication and innovative contributions.",
       "Identified and contacted potential KOL and affiliate partners.",
       "Communicated collaboration opportunities with content creators.",
       "Managed follow-ups and basic negotiations.",
