@@ -121,7 +121,7 @@ export default function Hero() {
                   <InstagramIcon size={20} />
                 </a>
                 <a
-                  href="https://wa.me/62831880331540"
+                  href="https://wa.me/6283188031540"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 bg-bg-light rounded-lg text-text-dark hover:bg-[#25D366] hover:text-white transition-colors duration-200"

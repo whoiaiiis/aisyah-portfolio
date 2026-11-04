@@ -5,8 +5,8 @@ const contactInfo = [
   {
     icon: WhatsAppIcon,
     label: 'WhatsApp',
-    value: '+62 831-8803-31540',
-    href: 'https://wa.me/62831880331540',
+    value: '+62 831-8803-1540',
+    href: 'https://wa.me/6283188031540',
     isPlaceholder: false,
     highlight: true,
   },
@@ -116,7 +116,7 @@ export default function Contact() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href="https://wa.me/62831880331540"
+              href="https://wa.me/6283188031540"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold rounded-xl transition-colors shadow-lg shadow-[#25D366]/30"
