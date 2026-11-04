@@ -92,7 +92,7 @@ const certificates = [
   },
   {
     id: 12,
-    title: 'KOL & Digital Campaign Training',
+    title: 'Best Intern of the Month (Consecutive September & October 2024)',
     issuer: 'Your Beauty Era (YBE)',
     year: '2024',
     category: 'Professional Development',

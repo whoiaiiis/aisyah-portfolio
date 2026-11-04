@@ -24,10 +24,11 @@ export const experiences = [
     id: 2,
     company: "Your Beauty Era (YBE)",
     position: "KOL Specialist Intern",
-    period: "Edit Period Here",
+    period: "September 2024 – October 2024",
     type: "Internship",
     logo: null,
     responsibilities: [
+      "Awarded Best Intern of the Month consecutively for September and October 2024 for outstanding dedication and innovative contributions.",
       "Identified and contacted potential KOL and affiliate partners.",
       "Communicated collaboration opportunities with content creators.",
       "Managed follow-ups and basic negotiations.",
@@ -36,6 +37,7 @@ export const experiences = [
       "Assisted in monitoring content deliverables and collaboration activities.",
     ],
     highlights: [
+      "Best Intern (Sept & Oct)",
       "Communication",
       "Coordination",
       "Partner Management",
