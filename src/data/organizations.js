@@ -3,7 +3,7 @@ export const organizations = [
     id: 1,
     name: "Himpunan Mahasiswa Muara Enim (HMME)",
     position: "General Secretary",
-    period: "Edit Period Here",
+    period: "2024 – 2025",
     responsibilities: [
       "Managed organizational administration and correspondence.",
       "Prepared and organized meeting documentation.",
@@ -16,7 +16,7 @@ export const organizations = [
     id: 2,
     name: "Himpunan Mahasiswa Jurusan Manajemen Informatika",
     position: "Department Secretary",
-    period: "Edit Period Here",
+    period: "2024 – 2025",
     responsibilities: [
       "Supported departmental administrative activities.",
       "Organized organizational documents and records.",
@@ -29,7 +29,7 @@ export const organizations = [
     id: 3,
     name: "LDK KARISMA",
     position: "Human Resources Development Division Member (PSDM)",
-    period: "2025 – Present",
+    period: "2024 – 2025",
     responsibilities: [
       "Participated in organizational development activities.",
       "Supported member development and organizational programs.",
