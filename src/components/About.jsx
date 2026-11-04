@@ -5,7 +5,7 @@ const info = [
   { icon: GraduationCap, label: 'Education', value: 'Diploma III in Information Management' },
   { icon: Building2, label: 'Institution', value: 'Politeknik Negeri Sriwijaya' },
   { icon: CheckCircle2, label: 'Academic Status', value: 'Graduated' },
-  { icon: Briefcase, label: 'Professional Interests', value: 'Administration, Data Management, IT, UI/UX Design' },
+  { icon: Briefcase, label: 'Professional Interests', value: 'Administration • Data Management • Information Technology • UI/UX Design • Digital Marketing & KOL Management' },
   { icon: MapPin, label: 'Location', value: 'South Sumatra, Indonesia' },
 ];
 
