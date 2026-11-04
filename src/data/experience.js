@@ -1,0 +1,45 @@
+export const experiences = [
+  {
+    id: 1,
+    company: "PT PLN (Persero) – UP3 Palembang, ULP Rivai",
+    position: "Technical Administration Intern",
+    period: "Edit Period Here",
+    type: "Internship",
+    logo: null,
+    responsibilities: [
+      "Assisted with technical administrative activities.",
+      "Managed and processed incoming and outgoing material records.",
+      "Entered and maintained material data through internal applications.",
+      "Assisted with customer complaint data management through the APKT system.",
+      "Updated and maintained SAIDI and SAIFI operational data through the web application.",
+      "Prepared administrative records and data recapitulations.",
+    ],
+    highlights: [
+      "Administrative Work",
+      "Data Accuracy",
+      "Operational Support",
+    ],
+  },
+  {
+    id: 2,
+    company: "Your Beauty Era (YBE)",
+    position: "KOL Specialist Intern",
+    period: "Edit Period Here",
+    type: "Internship",
+    logo: null,
+    responsibilities: [
+      "Identified and contacted potential KOL and affiliate partners.",
+      "Communicated collaboration opportunities with content creators.",
+      "Managed follow-ups and basic negotiations.",
+      "Maintained potential partner databases and collaboration progress.",
+      "Coordinated sample requests and creator collaboration requirements.",
+      "Assisted in monitoring content deliverables and collaboration activities.",
+    ],
+    highlights: [
+      "Communication",
+      "Coordination",
+      "Partner Management",
+      "Administrative Skills",
+    ],
+  },
+];
