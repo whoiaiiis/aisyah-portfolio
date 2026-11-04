@@ -92,9 +92,9 @@ const certificates = [
   },
   {
     id: 12,
-    title: 'Best Intern of the Month (Consecutive September & October 2024)',
+    title: 'Best Intern of the Month (Consecutive September & October 2026)',
     issuer: 'Your Beauty Era (YBE)',
-    year: '2024',
+    year: '2026',
     category: 'Professional Development',
     image: '/certificates/cert_12.png',
   },
