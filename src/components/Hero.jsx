@@ -1,11 +1,12 @@
-import { Database, Code2, Palette, Users, ArrowDown, Download, Mail } from 'lucide-react';
+import { Database, Code2, Palette, Users, Megaphone, ArrowDown, Download, Mail } from 'lucide-react';
 import { GithubIcon, InstagramIcon, LinkedinIcon, WhatsAppIcon } from './SocialIcons';
 
-const categories = [
+const expertiseAreas = [
   { icon: Database, label: 'Administration & Data Management' },
   { icon: Code2, label: 'Information Technology' },
   { icon: Palette, label: 'UI/UX & Graphic Design' },
-  { icon: Users, label: 'Organizational & Communication Skills' },
+  { icon: Users, label: 'Communication & Coordination' },
+  { icon: Megaphone, label: 'Digital Marketing & Partnership Support' },
 ];
 
 export default function Hero() {
@@ -29,12 +30,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text Content */}
           <div className="order-2 lg:order-1">
-            {/* Branding badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Combining Organization, Data, Technology, and Creativity
-            </div>
-
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
               Hello, I'm{' '}
               <span className="text-accent">Aisyah Arianti</span>
@@ -45,21 +40,26 @@ export default function Hero() {
               Turning Ideas into Organized, Functional, and Creative Solutions.
             </h2>
 
-            <p className="text-text-muted text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              An Information Management graduate passionate about administration, data management, digital technology, and creative design.
+            <p className="text-text-muted text-base lg:text-lg leading-relaxed mb-6 max-w-xl">
+              An Information Management graduate with a strong interest in administration, data management, information technology, and creative design. Experienced in administrative support, data processing, digital projects, and communication, with additional exposure to digital marketing and partnership management.
             </p>
 
-            {/* Category badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {categories.map(({ icon: Icon, label }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-2 px-3 py-2 bg-bg-light rounded-lg text-sm text-text-dark border border-border hover:border-accent/30 hover:bg-accent/5 transition-colors duration-200"
-                >
-                  <Icon size={16} className="text-accent shrink-0" />
-                  <span className="font-medium">{label}</span>
-                </div>
-              ))}
+            {/* Areas of Expertise */}
+            <div className="mb-8">
+              <p className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-3">
+                Areas of Expertise
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {expertiseAreas.map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-2 px-3 py-2 bg-bg-light rounded-lg text-xs sm:text-sm text-text-dark border border-border hover:border-accent/30 hover:bg-accent/5 transition-colors duration-200"
+                  >
+                    <Icon size={16} className="text-accent shrink-0" />
+                    <span className="font-medium">{label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* CTA Buttons */}

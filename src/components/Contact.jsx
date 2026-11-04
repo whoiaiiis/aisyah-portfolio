@@ -132,12 +132,6 @@ export default function Contact() {
               Send an Email
             </a>
           </div>
-
-          <div className="mt-6 pt-6 border-t border-white/10">
-            <p className="text-xs italic text-accent font-medium">
-              "Combining Organization, Data, Technology, and Creativity."
-            </p>
-          </div>
         </div>
       </div>
     </section>
