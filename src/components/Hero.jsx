@@ -41,7 +41,7 @@ export default function Hero() {
             </h2>
 
             <p className="text-text-muted text-base lg:text-lg leading-relaxed mb-6 max-w-xl">
-              An Information Management graduate with a strong interest in administration, data management, information technology, and creative design. Experienced in administrative support, data processing, digital projects, and communication, with additional exposure to digital marketing and partnership management.
+              An Information Management graduate interested in administration, data management, IT, and creative design, with experience in administrative support, digital projects, communication, and KOL management.
             </p>
 
             {/* Areas of Expertise */}
