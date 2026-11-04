@@ -16,8 +16,7 @@ export const skills = {
       "Operational Support",
     ],
     tools: [
-      { name: "Microsoft Excel", details: "IF, SUMIF, VLOOKUP, PivotTable" },
-      { name: "Microsoft Access", details: null },
+      { name: "Microsoft Excel", details: null },
     ],
   },
   technology: {
