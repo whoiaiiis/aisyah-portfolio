@@ -18,9 +18,9 @@ export const projects = [
       "A front-end online shopping application developed as a visual programming course project. Designed with an organized product catalog layout, intuitive navigation, and clean product display to enhance the online shopping experience.",
     coverImage: "/projects/proj_1/img_1.png",
     images: ["/projects/proj_1/img_1.png"],
-    tags: ["Visual Programming", "Front-End", "E-Commerce UI", "Course Project"],
-    tools: ["HTML", "CSS", "JavaScript"],
-    contributions: ["Front-End Development", "UI Layout Design", "Catalog Display"],
+    tags: ["Visual Programming", "Visual Basic", "Front-End", "E-Commerce UI"],
+    tools: ["Visual Basic", "Visual Studio", "Windows Forms"],
+    contributions: ["Visual Basic UI Design", "Layout Implementation", "Catalog Display"],
   },
   {
     id: 2,
