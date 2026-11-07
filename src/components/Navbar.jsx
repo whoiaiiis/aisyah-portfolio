@@ -54,10 +54,15 @@ export default function Navbar() {
         <a
           href="#home"
           onClick={(e) => handleClick(e, '#home')}
-          className="font-heading font-bold text-lg sm:text-xl text-primary flex items-center gap-0.5 group"
+          className="font-heading font-bold text-lg sm:text-xl text-primary flex items-center gap-2.5 group"
         >
-          <span>Aisyah</span>
-          <span className="text-accent group-hover:scale-125 transition-transform duration-200">.</span>
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-zinc-900 to-black border border-accent/40 shadow-xs flex items-center justify-center p-1 group-hover:border-accent group-hover:scale-105 transition-all duration-300">
+            <img src="/favicon.svg" alt="Aisyah Arianti Logo" className="w-full h-full object-contain" />
+          </div>
+          <div className="flex items-center gap-0.5">
+            <span>Aisyah</span>
+            <span className="text-accent group-hover:scale-125 transition-transform duration-200">.</span>
+          </div>
         </a>
 
         {/* Desktop nav */}
