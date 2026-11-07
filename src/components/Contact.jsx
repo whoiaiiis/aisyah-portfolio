@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, ArrowUpRight, Send, MessageCircle, Sparkles } from 'lucide-react';
+import { Mail, ArrowUpRight, Send, MessageCircle } from 'lucide-react';
 import { GithubIcon, InstagramIcon, LinkedinIcon, WhatsAppIcon } from './SocialIcons';
 
 const contactInfo = [
@@ -167,10 +167,8 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto text-center bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 backdrop-blur-md shadow-2xl relative overflow-hidden card-hover-aura">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           
-          <div className="flex items-center justify-center gap-2 text-xs font-mono text-accent mb-3">
-            <Sparkles size={14} />
+          <div className="flex items-center justify-center text-xs font-mono text-accent mb-3 tracking-wider">
             <span>OPEN FOR NEW CHALLENGES</span>
-            <Sparkles size={14} />
           </div>
 
           <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3 tracking-tight">
