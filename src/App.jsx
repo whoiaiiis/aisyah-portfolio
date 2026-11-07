@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ParticleBurstIntro from './components/ParticleBurstIntro';
+import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -62,9 +62,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-secondary relative overflow-x-hidden">
-      {/* Cinematic Particle Burst Intro Overlay */}
+      {/* Sleek Numeric Loading Screen */}
       {showIntro && (
-        <ParticleBurstIntro
+        <LoadingScreen
           onFadeStart={() => setIsRevealing(true)}
           onComplete={() => setShowIntro(false)}
         />
