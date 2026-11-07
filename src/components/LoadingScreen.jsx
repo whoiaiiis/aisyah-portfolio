@@ -47,13 +47,13 @@ export default function LoadingScreen({ onFadeStart, onComplete }) {
   if (phase === 'done') return null;
 
   // Dynamic portfolio status labels matching Aisyah's branding
-  let statusText = 'Memuat aset portofolio...';
+  let statusText = 'Loading assets...';
   if (progress > 30 && progress <= 70) {
-    statusText = 'Menyiapkan showcase karya...';
+    statusText = 'Preparing portfolio showcase...';
   } else if (progress > 70 && progress < 100) {
-    statusText = 'Menyempurnakan visual...';
+    statusText = 'Polishing visuals...';
   } else if (progress === 100) {
-    statusText = 'Selamat datang!';
+    statusText = 'Welcome!';
   }
 
   return (
