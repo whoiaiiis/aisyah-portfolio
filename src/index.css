@@ -250,6 +250,11 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
+.stroke-text-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+  color: transparent;
+}
+
 @keyframes spinSlow {
   from {
     transform: rotate(0deg);

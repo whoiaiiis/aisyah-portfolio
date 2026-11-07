@@ -13,9 +13,15 @@ import Footer from './components/Footer';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
+  const [isRevealing, setIsRevealing] = useState(false);
+
   useEffect(() => {
-    const selector = '.reveal, .reveal-blur, .reveal-blur-left, .reveal-blur-right, .reveal-blur-scale';
-    
+    // Only start observing scroll-reveal animations once the intro begins revealing
+    if (showIntro && !isRevealing) return;
+
+    const selector =
+      '.reveal, .reveal-blur, .reveal-blur-left, .reveal-blur-right, .reveal-blur-scale';
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,7 +44,8 @@ function App() {
       });
     };
 
-    observeElements();
+    // Small delay to ensure the DOM is painted smoothly
+    const timer = setTimeout(observeElements, 100);
 
     const mutationObserver = new MutationObserver(() => {
       observeElements();
@@ -47,26 +54,45 @@ function App() {
     mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
+      clearTimeout(timer);
       observer.disconnect();
       mutationObserver.disconnect();
     };
-  }, []);
+  }, [showIntro, isRevealing]);
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <div className="min-h-screen bg-secondary relative overflow-x-hidden">
+      {/* Cinematic Particle Burst Intro Overlay */}
       {showIntro && (
-        <ParticleBurstIntro onComplete={() => setShowIntro(false)} />
+        <ParticleBurstIntro
+          onFadeStart={() => setIsRevealing(true)}
+          onComplete={() => setShowIntro(false)}
+        />
       )}
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Organization />
-      <Projects />
-      <Certificates />
-      <Contact />
-      <Footer />
+
+      {/* Main Portfolio Content with Synchronized Dissolve Entrance */}
+      <div
+        className={
+          showIntro
+            ? `transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) ${
+                !isRevealing
+                  ? 'opacity-0 scale-[0.985] filter blur-md pointer-events-none'
+                  : 'opacity-100 scale-100 filter-none pointer-events-auto'
+              }`
+            : 'relative'
+        }
+      >
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Organization />
+        <Projects />
+        <Certificates />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
