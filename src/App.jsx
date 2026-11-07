@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ParticleBurstIntro from './components/ParticleBurstIntro';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
   useEffect(() => {
     const selector = '.reveal, .reveal-blur, .reveal-blur-left, .reveal-blur-right, .reveal-blur-scale';
     
@@ -52,6 +54,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-secondary">
+      {showIntro && (
+        <ParticleBurstIntro onComplete={() => setShowIntro(false)} />
+      )}
       <Navbar />
       <Hero />
       <About />
