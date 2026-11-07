@@ -47,12 +47,12 @@ const contactInfo = [
 export default function Contact() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-primary text-white relative overflow-hidden">
-      {/* Background glowing accents */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Dynamic Background glowing aura (Aura Membuyar) */}
+      <div className="absolute -top-20 -right-20 w-96 h-96 bg-accent/20 rounded-full aura-blob pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-[420px] h-[420px] bg-accent/15 rounded-full aura-blob-delayed pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16 reveal">
+        <div className="max-w-3xl mx-auto text-center mb-16 reveal-blur">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full text-xs font-medium text-accent mb-4 border border-white/10">
             Let's Collaborate
           </div>
@@ -67,25 +67,26 @@ export default function Contact() {
 
         {/* Contact cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-16">
-          {contactInfo.map((item) => {
+          {contactInfo.map((item, idx) => {
             const Icon = item.icon;
+            const delayClass = idx === 0 ? '' : idx === 1 ? 'delay-100' : idx === 2 ? 'delay-150' : idx === 3 ? 'delay-200' : 'delay-300';
             return (
               <a
                 key={item.label}
                 href={item.href}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel="noopener noreferrer"
-                className={`reveal group p-5 sm:p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
+                className={`reveal-blur ${delayClass} card-hover-aura group p-5 sm:p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between ${
                   item.highlight
                     ? 'bg-accent/15 border-accent/40 hover:bg-accent/25 hover:border-accent'
                     : 'bg-white/5 border-white/10 hover:border-accent/40 hover:bg-white/10'
                 }`}
               >
                 <div>
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors duration-300 ${
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 ${
                     item.highlight
-                      ? 'bg-accent text-white group-hover:scale-105'
-                      : 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
+                      ? 'bg-accent text-white group-hover:scale-110 shadow-lg shadow-accent/30'
+                      : 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white group-hover:scale-110'
                   }`}>
                     <Icon size={22} />
                   </div>
@@ -109,7 +110,7 @@ export default function Contact() {
         </div>
 
         {/* Central Call to Action */}
-        <div className="reveal max-w-xl mx-auto text-center bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
+        <div className="reveal-blur-scale card-hover-aura max-w-xl mx-auto text-center bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
           <h3 className="font-heading text-xl font-bold mb-2">Have a role, collaboration, or question in mind?</h3>
           <p className="text-white/70 text-sm mb-6">
             Reach out directly via WhatsApp for quick response or send an email to discuss further.

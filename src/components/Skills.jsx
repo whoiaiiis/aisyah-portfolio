@@ -8,7 +8,7 @@ export default function Skills() {
     <section id="skills" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16 reveal-blur">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Skills & Expertise
           </h2>
@@ -16,12 +16,13 @@ export default function Skills() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {Object.values(skills).map((cat) => {
+          {Object.values(skills).map((cat, idx) => {
             const Icon = iconMap[cat.icon] || Database;
+            const delayClass = idx === 0 ? '' : idx === 1 ? 'delay-150' : idx === 2 ? 'delay-200' : 'delay-300';
             return (
               <div
                 key={cat.title}
-                className="reveal bg-white rounded-2xl border border-border/50 p-8 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                className={`reveal-blur ${delayClass} bg-white rounded-2xl border border-border/50 p-8 shadow-sm card-hover-aura`}
               >
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-4">

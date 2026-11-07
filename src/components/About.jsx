@@ -14,7 +14,7 @@ export default function About() {
     <section id="about" className="py-20 lg:py-28 bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16 reveal-blur">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Get to Know Me
           </h2>
@@ -23,7 +23,7 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Bio */}
-          <div className="reveal space-y-5 text-text-muted leading-relaxed text-base lg:text-lg">
+          <div className="reveal-blur-left space-y-5 text-text-muted leading-relaxed text-base lg:text-lg">
             <p>
               I'm <span className="text-primary font-semibold">Aisyah Arianti</span>, a Diploma III graduate in Information Management from Politeknik Negeri Sriwijaya.
             </p>
@@ -42,12 +42,12 @@ export default function About() {
           </div>
 
           {/* Info Card */}
-          <div className="reveal">
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-border/50">
+          <div className="reveal-blur-right">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-border/50 card-hover-aura">
               <h3 className="font-heading text-xl font-bold text-primary mb-6">Personal Information</h3>
               <div className="space-y-5">
                 {info.map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="flex items-start gap-4">
+                  <div key={label} className="flex items-start gap-4 p-2.5 rounded-xl hover:bg-bg-light/80 transition-colors duration-200">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
                       <Icon size={20} className="text-accent" />
                     </div>

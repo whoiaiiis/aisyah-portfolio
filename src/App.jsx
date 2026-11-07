@@ -12,8 +12,8 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    const reveals = document.querySelectorAll('.reveal');
-
+    const selector = '.reveal, .reveal-blur, .reveal-blur-left, .reveal-blur-right, .reveal-blur-scale';
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -23,15 +23,30 @@ function App() {
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px',
       }
     );
 
-    reveals.forEach((el) => observer.observe(el));
+    const observeElements = () => {
+      document.querySelectorAll(selector).forEach((el) => {
+        if (!el.classList.contains('active')) {
+          observer.observe(el);
+        }
+      });
+    };
+
+    observeElements();
+
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      reveals.forEach((el) => observer.unobserve(el));
+      observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, []);
 

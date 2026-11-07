@@ -6,22 +6,24 @@ export default function Organization() {
     <section id="organization" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-6 reveal">
+        <div className="text-center mb-6 reveal-blur">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Organizational Experience
           </h2>
           <div className="w-16 h-1 bg-accent mx-auto rounded-full" />
         </div>
-        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-16 reveal">
+        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-16 reveal-blur delay-100">
           Leadership & community involvement beyond professional internships.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {organizations.map((org) => (
-            <div
-              key={org.id}
-              className="reveal bg-white rounded-2xl border border-border/50 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-            >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {organizations.map((org, idx) => {
+            const delayClass = idx === 0 ? '' : idx === 1 ? 'delay-150' : 'delay-200';
+            return (
+              <div
+                key={org.id}
+                className={`reveal-blur ${delayClass} bg-white rounded-2xl border border-border/50 shadow-sm card-hover-aura overflow-hidden flex flex-col justify-between`}
+              >
               {/* Orange left accent */}
               <div className="flex">
                 <div className="w-1.5 bg-accent shrink-0" />
@@ -53,7 +55,8 @@ export default function Organization() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

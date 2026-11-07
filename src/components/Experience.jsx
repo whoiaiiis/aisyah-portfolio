@@ -6,7 +6,7 @@ export default function Experience() {
     <section id="experience" className="py-20 lg:py-28 bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16 reveal-blur">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Professional Experience
           </h2>
@@ -19,17 +19,19 @@ export default function Experience() {
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/20 -translate-x-1/2" />
 
           <div className="space-y-12">
-            {experiences.map((exp, idx) => (
-              <div key={exp.id} className="reveal relative">
-                {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-accent rounded-full border-4 border-white shadow-md z-10 items-center justify-center top-8">
-                  <div className="w-2 h-2 bg-white rounded-full" />
-                </div>
+            {experiences.map((exp, idx) => {
+              const revealDir = idx % 2 === 0 ? 'reveal-blur-left' : 'reveal-blur-right';
+              return (
+                <div key={exp.id} className={`${revealDir} relative`}>
+                  {/* Timeline dot */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-accent rounded-full border-4 border-white shadow-md z-10 items-center justify-center top-8">
+                    <div className="w-2 h-2 bg-white rounded-full" />
+                  </div>
 
-                <div className={`md:flex items-start gap-8 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Card side */}
-                  <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 border border-border/30">
+                  <div className={`md:flex items-start gap-8 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    {/* Card side */}
+                    <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                      <div className="bg-white rounded-2xl shadow-md p-8 border border-border/30 card-hover-aura">
                       {/* Header */}
                       <div className="flex items-start gap-4 mb-5">
                         <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
@@ -80,8 +82,9 @@ export default function Experience() {
                   <div className="hidden md:block md:w-1/2" />
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
         </div>
       </div>
     </section>

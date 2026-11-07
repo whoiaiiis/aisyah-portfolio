@@ -40,7 +40,7 @@ export default function Projects() {
     <section id="projects" className="py-20 lg:py-28 bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 reveal">
+        <div className="text-center mb-6 reveal-blur">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-xs font-semibold text-accent mb-3">
             Portfolio Gallery
           </div>
@@ -49,12 +49,12 @@ export default function Projects() {
           </h2>
           <div className="w-16 h-1 bg-accent mx-auto rounded-full" />
         </div>
-        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-12 reveal">
+        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-12 reveal-blur delay-100">
           A showcase of 18 academic, training, personal, and administrative projects demonstrating versatile capabilities in technology, design, and data organization.
         </p>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal-blur delay-150">
           {projectCategories.map((cat) => {
             const count =
               cat === 'All Projects'
@@ -89,7 +89,7 @@ export default function Projects() {
           {filtered.map((project) => (
             <div
               key={project.id}
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between animate-in fade-in duration-200"
+              className="group bg-white rounded-2xl shadow-sm card-hover-aura overflow-hidden border border-border/40 flex flex-col justify-between animate-blur-in"
             >
               <div>
                 {/* Project Image Preview */}

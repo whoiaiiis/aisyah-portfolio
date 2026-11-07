@@ -102,7 +102,7 @@ export default function Certificates() {
     <section id="certificates" className="py-20 lg:py-28 bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-6 reveal">
+        <div className="text-center mb-6 reveal-blur">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-xs font-semibold text-accent mb-3">
             Credentials & Recognition
           </div>
@@ -111,12 +111,12 @@ export default function Certificates() {
           </h2>
           <div className="w-16 h-1 bg-accent mx-auto rounded-full" />
         </div>
-        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-12 reveal">
+        <p className="text-center text-text-muted text-base lg:text-lg max-w-2xl mx-auto mb-12 reveal-blur delay-100">
           Official certificates, competition awards, and training verifications across academic, technological, and organizational activities.
         </p>
 
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal-blur delay-150">
           {categories.map((cat) => {
             const count =
               cat === 'All'
@@ -152,7 +152,7 @@ export default function Certificates() {
           {filtered.map((cert) => (
             <div
               key={cert.id}
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden border border-border/40 flex flex-col justify-between animate-in fade-in duration-200"
+              className="group bg-white rounded-2xl shadow-sm card-hover-aura overflow-hidden border border-border/40 flex flex-col justify-between animate-blur-in"
             >
               <div>
                 {/* Certificate image preview */}
