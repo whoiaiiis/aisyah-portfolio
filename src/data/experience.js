@@ -26,14 +26,14 @@ export const experiences = [
     type: "Internship",
     logo: null,
     responsibilities: [
-      "Achieved Best Intern of the Month for two consecutive months (September and October 2026) in recognition of strong performance, dedication, and contributions to the team.",
+      "Achieved Best Intern of the Month for two consecutive months (September 2026 – October 2026) in recognition of strong performance, dedication, and contributions to the team.",
       "Identified and contacted 100+ KOLs, affiliates, and potential Brand Ambassadors, expanding the pool of potential promotional partners for brand collaboration.",
       "Conducted initial communications, negotiations, and follow-ups regarding collaboration offers and rate cards, helping identify potential partners and assess collaboration opportunities.",
       "Maintained partner databases and tracked collaboration progress, ensuring organized partnership records and easier monitoring of ongoing opportunities.",
       "Coordinated product sample requests and monitored content deliverables, supporting smoother collaboration processes and ensuring promotional activities aligned with agreed requirements.",
     ],
     highlights: [
-      "Best Intern (Sept & Oct)",
+      "Best Intern (September 2026 – October 2026)",
       "Communication",
       "Coordination",
       "Partner Management",

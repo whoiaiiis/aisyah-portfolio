@@ -87,7 +87,7 @@ const certificates = [
   },
   {
     id: 12,
-    title: 'Best Intern of the Month — KOL Specialist (Consecutive Sept & Oct 2026)',
+    title: 'Best Intern of the Month — KOL Specialist (September 2026 – October 2026)',
     issuer: 'Your Beauty Era (YBE) — Role: KOL Specialist Intern',
     year: '2026',
     category: 'Professional Development',
